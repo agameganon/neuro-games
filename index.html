@@ -39,7 +39,9 @@ section{padding:88px 0}
 /* 1. hero */
 .hero{padding:56px 0 72px;background:radial-gradient(circle at 85% 10%,#fde9c4 0,transparent 40%),radial-gradient(circle at 5% 90%,#dcebe0 0,transparent 35%)}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.hero .cover{max-width:min(440px,100%);justify-self:center;border-radius:14px;box-shadow:0 30px 60px -20px #1f2a4a55;transform:rotate(1.5deg)}
+.hero .cover{display:block;max-width:min(440px,100%);justify-self:center;border-radius:14px;box-shadow:0 30px 60px -20px #1f2a4a55;transform:rotate(1.5deg);transition:transform .2s}
+.hero .cover img{width:100%;border-radius:14px}
+.hero .cover:hover{transform:rotate(0) scale(1.02)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 34px;padding:0;list-style:none}
 .chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:700;font-size:16px;color:var(--navy)}
 .ctas{display:flex;flex-wrap:wrap;gap:14px}
@@ -98,7 +100,7 @@ footer a{color:#c5cce0}
 
 @media (max-width:860px){
   .hero{padding:28px 0 48px}
-  .hero .wrap>img.cover{order:-1;max-width:min(260px,72%) !important;margin:0 auto}
+  .hero .wrap>.cover{order:-1;max-width:min(260px,72%) !important;margin:0 auto}
   .chips{gap:8px;margin:18px 0 24px}
   .chips li{font-size:14px;padding:6px 12px}
   .btn{font-size:16px;padding:15px 22px}
@@ -142,7 +144,7 @@ footer a{color:#c5cce0}
         <a class="btn ghost" href="#inside">See inside</a>
       </div>
     </div>
-    <img class="cover" src="img/cover.jpg" alt="Neuro Games — Brain + Body Workbook cover: two kids balancing in a sunny playroom" width="1000" height="1306">
+    <a class="cover" href="https://www.amazon.com/dp/B0HN2FSRKN" target="_blank" rel="noopener" aria-label="Neuro Games on Amazon"><img src="img/cover.jpg" alt="Neuro Games — Brain + Body Workbook cover: two kids balancing in a sunny playroom" width="1000" height="1306"></a>
   </div>
 </header>
 
