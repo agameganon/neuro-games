@@ -8,284 +8,228 @@
 <meta property="og:title" content="Neuro Games — Brain + Body Workbook">
 <meta property="og:description" content="60 ten-minute challenges that pair a thinking game with movement. For kids ages 6–10.">
 <meta property="og:image" content="https://agameganon.github.io/neuro-games/img/cover.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,600;100,800;112,800&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
 <style>
-:root{
-  --paper:#fbf6ec; --cream:#f3eadb; --navy:#1f2a4a; --ink:#33405f; --muted:#5d6782;
-  --green:#3f7d5c; --green-soft:#e3efe6; --coral:#e2614b; --yellow:#f3c14b; --blue:#3f7fc1;
-  --card:#ffffff; --line:#e7dccb;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 18px/1.6 Nunito,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--blue)}
-h1,h2,h3{font-family:Fredoka,Nunito,sans-serif;color:var(--navy);line-height:1.15;margin:0 0 .5em}
-h1{font-size:clamp(34px,5.4vw,58px);font-weight:700}
-h2{font-size:clamp(28px,3.8vw,42px);font-weight:600}
-h3{font-size:22px;font-weight:600}
-p{margin:0 0 1em}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.wrap>*{min-width:0}
-section{padding:88px 0}
-.eyebrow{display:inline-block;font:700 14px/1 Nunito,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:var(--green-soft);padding:8px 14px;border-radius:999px;margin-bottom:18px}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--coral);color:#fff;text-decoration:none;font:700 18px/1 Nunito,sans-serif;padding:18px 30px;border-radius:999px;box-shadow:0 6px 0 #b9473485;transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.ghost{background:transparent;color:var(--navy);box-shadow:none;border:2px solid var(--navy)}
-.lead{font-size:21px;color:var(--muted)}
+body{margin:0;background:#F4F1EA}
+a{color:#141A1C}a:hover{color:#2F5D4E}
+img{display:block}
+summary{list-style:none}summary::-webkit-details-marker{display:none}details[open] .tg{transform:rotate(45deg)}.tg{display:inline-block;transition:transform .2s}
+</style>
 
-/* 1. hero */
-.hero{padding:56px 0 72px;background:radial-gradient(circle at 85% 10%,#fde9c4 0,transparent 40%),radial-gradient(circle at 5% 90%,#dcebe0 0,transparent 35%)}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.hero .cover{max-width:min(440px,100%);justify-self:center;border-radius:14px;box-shadow:0 30px 60px -20px #1f2a4a55;transform:rotate(1.5deg)}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 34px;padding:0;list-style:none}
-.chips li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:700;font-size:16px;color:var(--navy)}
-.ctas{display:flex;flex-wrap:wrap;gap:14px}
-
-/* 2. story */
-.story{background:#fff}
-.story .wrap.cols{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
-.story blockquote{margin:0;font:500 24px/1.45 Fredoka,sans-serif;color:var(--navy);border-left:5px solid var(--yellow);padding-left:22px}
-.banner{border-radius:16px;margin-top:56px;box-shadow:0 20px 40px -24px #1f2a4a66}
-
-/* 3. trust */
-.trust .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:56px;align-items:start}
-.portrait{border-radius:18px;box-shadow:0 24px 48px -24px #1f2a4a77}
-.creds{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:12px}
-.creds li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px 14px 54px;position:relative}
-.creds li::before{content:"✓";position:absolute;left:16px;top:13px;width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;font-weight:700;display:grid;place-items:center;font-size:15px}
-.creds b{color:var(--navy);display:block}
-.creds span{color:var(--muted);font-size:16px}
-.certs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
-.certs a{display:flex;align-items:center;aspect-ratio:4/3;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:#fff}
-.certs a:hover{box-shadow:0 10px 24px -12px #1f2a4a66}
-
-/* 4. inside */
-.inside{background:var(--cream)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
-.tile{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 14px 30px -22px #1f2a4a66}
-.tile img{aspect-ratio:1/1;object-fit:cover;width:100%}
-.tile div{padding:18px 20px 22px}
-.tile h3{margin-bottom:6px}
-.tile p{margin:0;font-size:16px;color:var(--muted)}
-.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
-.fact{background:#fff;border-radius:16px;padding:20px;text-align:center}
-.fact b{display:block;font:700 34px/1 Fredoka,sans-serif;color:var(--coral);margin-bottom:6px}
-.fact span{font-size:15px;color:var(--muted)}
-.kids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
-.kids img{border-radius:16px;aspect-ratio:3/5;object-fit:cover;object-position:center top;width:100%}
-
-/* 5. research */
-.studies{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
-.study{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px}
-.study h3{font-size:19px}
-.study p{font-size:16px;margin-bottom:10px}
-.study a{font-weight:700;font-size:15px;text-decoration:none}
-.study a:hover{text-decoration:underline}
-.note{margin-top:28px;font-size:15px;color:var(--muted);background:#fff;border-radius:12px;padding:14px 18px;border-left:4px solid var(--yellow)}
-.why-now{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
-.why-now div{background:var(--green-soft);border-radius:16px;padding:20px 22px;font-size:16px}
-.why-now b{color:var(--navy);display:block;margin-bottom:4px;font-size:17px}
-
-/* final */
-.final{background:var(--navy);color:#e8ecf7;text-align:center}
-.final h2{color:#fff}
-.final .lead{color:#c5cce0;max-width:640px;margin:0 auto 32px}
-footer{background:var(--navy);color:#8f98b5;text-align:center;font-size:14px;padding:0 20px 40px}
-footer a{color:#c5cce0}
-
-@media (max-width:860px){
-  .hero{padding:28px 0 48px}
-  .hero .wrap>img.cover{order:-1;max-width:min(260px,72%) !important;margin:0 auto}
-  .chips{gap:8px;margin:18px 0 24px}
-  .chips li{font-size:14px;padding:6px 12px}
-  .btn{font-size:16px;padding:15px 22px}
-  .banner{display:none}
-  .grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:12px;margin-top:28px}
-  .tile div{padding:12px 12px 14px}
-  .tile h3{font-size:16px}
-  .tile p{font-size:13.5px;line-height:1.45}
-  .study{padding:16px 18px}
-  .study p{font-size:15px}
-  .story blockquote{font-size:21px}
-  .why-now div{padding:16px 18px}
-
-  section{padding:64px 0}
-  .hero .wrap,.story .wrap.cols,.trust .wrap{grid-template-columns:minmax(0,1fr);gap:36px}
-  .hero .cover{transform:none}
-  .story .media{order:-1}
-  .portrait{max-width:320px}
-  .studies,.why-now{grid-template-columns:1fr}
-  .kids{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .facts{grid-template-columns:repeat(2,1fr)}
-  body{font-size:17px}
-  .lead{font-size:19px}
+<style>@media (max-width:700px){h1{font-size:56px!important}h2{font-size:44px!important}section,nav{padding-left:20px!important;padding-right:20px!important}}</style>
+<style>
+@media (max-width:700px){
+  body>div{font-size:17px!important}
+  nav{min-height:60px!important}
+  nav>div>a[href^="#"]{display:none!important}
+  nav>div{gap:0!important}
+  h1{font-size:46px!important;line-height:.95!important}
+  h2{font-size:34px!important}
+  #author h2{font-size:48px!important}
+  #top>div:first-child{padding:36px 0 24px!important;gap:24px!important}
+  #top>div:first-child>p:nth-of-type(2){font-size:19px!important}
+  #top>div:last-child{padding:0 0 40px!important}
+  #top>div:last-child img{max-width:300px!important}
+  [style*="minmax(220px, 1fr)); gap: 16px"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  section>div[style*="minmax(220px, 1fr))"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  section>div[style*="minmax(220px, 1fr))"]>div{border-left:0!important;padding:22px 12px 22px 0!important}
+  section>div[style*="minmax(220px, 1fr))"]>div>span:first-child{font-size:52px!important}
+  [style*="minmax(320px, 1fr)"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 12px!important}
+  [style*="minmax(320px, 1fr)"] figcaption>span:first-child{font-size:16px!important}
+  [style*="minmax(320px, 1fr)"] figcaption>span:last-child{font-size:14px!important;line-height:1.4}
+  [style*="minmax(340px, 1fr)"]{grid-template-columns:1fr!important}
+  [style*="minmax(340px, 1fr)"]>div{padding:28px 0!important;border-left:0!important}
+  [style*="minmax(340px, 1fr)"]>div+div{border-top:1px solid #141A1C}
+  [style*="minmax(340px, 1fr)"] span[style*="56px"]{font-size:44px!important}
+  #author blockquote{font-size:23px!important}
+  [style*="minmax(96px, 1fr)"]{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  section[style*="120px 40px 0"],section[style*="96px 40px 0"]{padding-top:64px!important}
+  [style*="padding: 72px 0 96px"]{padding:48px 0 56px!important;gap:28px!important}
+  [style*="padding: 72px 0 96px"]>img{width:150px!important;flex-basis:150px!important}
+  [style*="flex: 0 0 200px"]{flex-basis:100%!important}
 }
 </style>
 </head>
 <body>
 
-<!-- 1. Hook -->
-<header class="hero">
-  <div class="wrap">
-    <div>
-      <span class="eyebrow">New book · ages 6–10</span>
-      <h1>Ten minutes. One puzzle. One move.</h1>
-      <p class="lead"><b>Neuro Games</b> is a screen-free workbook where kids spot what changed, find the path and finish the pattern, then cross a hand to the opposite knee, balance on one foot and switch hands. Most challenges pair thinking with moving.</p>
-      <ul class="chips">
-        <li>60 challenges</li><li>About 10 minutes each</li><li>Two age versions in every activity</li><li>Mostly just a pencil + a little floor space</li>
-      </ul>
-      <div class="ctas">
-        <a class="btn" href="https://www.amazon.com/dp/B0HN2FSRKN" target="_blank" rel="noopener">Get it on Amazon →</a>
-        <a class="btn ghost" href="#inside">See inside</a>
-      </div>
-    </div>
-    <img class="cover" src="img/cover.jpg" alt="Neuro Games — Brain + Body Workbook cover: two kids balancing in a sunny playroom" width="1000" height="1306">
-  </div>
+<div style="font-family: Newsreader, Georgia, serif; color: #141A1C; background: #F4F1EA; font-size: 19px; line-height: 1.55">
+
+<!-- TOP BAR -->
+<header style="border-bottom: 1px solid #141A1C">
+<nav style="max-width: 1280px; margin: 0 auto; padding: 0 40px; min-height: 72px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px">
+<a href="#top" style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -0.01em; text-transform: uppercase; text-decoration: none">Neuro Games</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase">
+<a href="#inside" style="text-decoration: none">Inside</a>
+<a href="#author" style="text-decoration: none">Author</a>
+<a href="#research" style="text-decoration: none">Research</a>
+<a target="_blank" rel="noopener" href="https://www.amazon.com/dp/B0HN2FSRKN" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #141A1C; color: #F4F1EA; text-decoration: none">Buy on Amazon</a>
+</div>
+</nav>
 </header>
 
-<!-- 2. News and why -->
-<section class="story">
-  <div class="wrap cols">
-    <div class="media">
-      <blockquote>“I made this book for my own children. They were its first testers.”</blockquote>
-    </div>
-    <div>
-      <span class="eyebrow">The news</span>
-      <h2>Why I wrote Neuro Games</h2>
-      <p>My new book, <i>Neuro Games</i>, is now on Amazon.</p>
-      <p>Many of you know me as the director of Coddy. For more than 10 years I have worked with children, and again and again I saw the same thing: kids engage differently when they can think and move at the same time.</p>
-      <p>At home, while practicing with my own kids, I collected activities from textbooks and video lectures. Little by little the idea grew to bring them together in one book.</p>
-      <p>My toughest examiner was our grandmother, a doctor with 40 years of practice who spent years caring for children at the Suvorov Military School and a children's wushu federation. She quizzed me on anatomy and physiology before my exams, and her checks would make Minos and Procrustes look lenient.</p>
-      <p>The result is 60 short challenges, most of them pairing a puzzle with a move. One minute your child is spotting what changed in a picture, the next they are reaching a hand to the opposite knee or standing on one foot.</p>
-      <p>The illustrations were drawn by AI from my detailed instructions, which helped keep the book affordable. The concept, the choice and adaptation of every activity, the two age versions, and all the checking and redoing are human work.</p>
-      <p><b>— Natalia Milos</b> <span style="color:var(--muted)">(I write as Milos, short for my surname, Miloserdnaya)</span></p>
-    </div>
-  </div>
-  <div class="wrap">
-    <img class="banner" src="img/banner.jpg" alt="Four Neuro Games activity pages fanned out: puzzles, mazes and movement games" loading="lazy">
-  </div>
+<!-- HERO -->
+<section id="top" style="max-width: 1280px; margin: 0 auto; padding: 0 40px; display: flex; flex-wrap: wrap; gap: 0">
+<div style="flex: 1 1 560px; min-width: 0; padding: 80px 56px 64px 0; display: flex; flex-direction: column; gap: 32px">
+<p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase">A brain + body workbook / Ages 6–10 / By Natalia Milos</p>
+<h1 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-stretch: 100%; font-size: 104px; line-height: 0.92; letter-spacing: -0.04em; text-transform: uppercase">Ten minutes. One puzzle. One move.</h1>
+<p style="margin: 0; font-size: 23px; line-height: 1.45; max-width: 540px">A screen-free workbook where kids spot what changed, find the path and finish the pattern, then cross a hand to the opposite knee or balance on one foot. Most challenges pair thinking and moving on the same page.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+<a target="_blank" rel="noopener" href="https://www.amazon.com/dp/B0HN2FSRKN" style="display: inline-flex; align-items: center; gap: 14px; min-height: 60px; padding: 0 32px; background: #2F5D4E; color: #FFFFFF; text-decoration: none; font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; letter-spacing: 0.02em; text-transform: uppercase">Buy on Amazon <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
+<a href="#inside" style="font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; letter-spacing: 0.02em; text-transform: uppercase; text-underline-offset: 6px">Look inside</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); border-top: 1px solid #141A1C; margin-top: 8px">
+<div style="padding: 14px 16px 0 0; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #4A5457">Format</span><span>Paperback</span></div>
+<div style="padding: 14px 16px 0 0; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #4A5457">Pages</span><span>82</span></div>
+<div style="padding: 14px 16px 0 0; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #4A5457">Ages</span><span>6–10</span></div>
+<div style="padding: 14px 16px 0 0; display: flex; flex-direction: column"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #4A5457">Answer keys</span><span>Included</span></div>
+</div>
+</div>
+<div style="flex: 1 1 440px; min-width: 0; display: flex; align-items: center; justify-content: center; padding: 64px 0 64px 48px">
+<img src="img/cover.jpg" alt="Neuro Games, Brain + Body Workbook, cover: two kids balancing in a sunny playroom" style="width: 100%; max-width: 420px; height: auto; box-shadow: 0 28px 50px -20px rgba(20,26,28,.45), 0 4px 10px -4px rgba(20,26,28,.2)">
+</div>
 </section>
 
-<!-- 3. Trust -->
-<section class="trust" id="author">
-  <div class="wrap">
-    <img class="portrait" src="img/author.jpg" alt="Natalia Milos, author of Neuro Games" loading="lazy" width="700" height="1050">
-    <div>
-      <span class="eyebrow">About the author</span>
-      <h2>Education, youth fitness and brain fitness</h2>
-      <p>Natalia Milos is the director of Coddy, a coding school for kids in New York, and has worked with children for more than 10 years. She trained in youth fitness, personal fitness training, and brain fitness; her Fitness Professional Association courses included coursework in anatomy and physiology.</p>
-      <ul class="creds">
-        <li><b>Youth Exercise Specialist (YES)</b><span>Certified · National Academy of Sports Medicine (NASM)</span></li>
-        <li><b>Brain Fitness Coach</b><span>Certified · International Sports Sciences Association (ISSA)</span></li>
-        <li><b>Youth Fitness Instructor · Personal Fitness Trainer</b><span>Completed courses · Fitness Professional Association</span></li>
-        <li><b>Cognitive Fitness</b><span>Completed online course · Harvard Health Publishing</span></li>
-      </ul>
-      <div class="certs">
-        <a href="img/cert-nasm-yes.jpg" target="_blank" rel="noopener"><img src="img/cert-nasm-yes-s.jpg" alt="Youth Exercise Specialist (YES) certificate, National Academy of Sports Medicine" loading="lazy" width="520" height="390"></a>
-        <a href="img/cert-issa-brain-fitness.jpg" target="_blank" rel="noopener"><img src="img/cert-issa-brain-fitness-s.jpg" alt="Brain Fitness Coach certification, International Sports Sciences Association" loading="lazy" width="520" height="402"></a>
-        <a href="img/cert-harvard-cognitive-fitness.jpg" target="_blank" rel="noopener"><img src="img/cert-harvard-cognitive-fitness-s.jpg" alt="Cognitive Fitness online course certificate, Harvard Health Publishing" loading="lazy" width="520" height="390"></a>
-        <a href="img/cert-fpa-youth-fitness.jpg" target="_blank" rel="noopener"><img src="img/cert-fpa-youth-fitness-s.jpg" alt="Youth Fitness Instructor course certificate, Fitness Professional Association" loading="lazy" width="520" height="390"></a>
-        <a href="img/cert-fpa-personal-trainer.jpg" target="_blank" rel="noopener"><img src="img/cert-fpa-personal-trainer-s.jpg" alt="Personal Fitness Trainer course certificate, Fitness Professional Association" loading="lazy" width="520" height="390"></a>
-      </div>
-      <p style="font-size:15px;color:var(--muted);margin-top:10px">Tap a certificate to see it full size. Certificates are issued to her full name, Natalia Miloserdnaya.</p>
-    </div>
-  </div>
+<!-- NUMBERS -->
+<section style="border-top: 1px solid #141A1C; border-bottom: 1px solid #141A1C">
+<div style="max-width: 1280px; margin: 0 auto; padding: 0 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))">
+<div style="padding: 36px 24px 36px 0; display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 72px; line-height: 0.9; letter-spacing: -0.04em">60</span><span style="font-size: 17px">brain + body challenges</span></div>
+<div style="padding: 36px 24px; border-left: 1px solid #141A1C; display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 72px; line-height: 0.9; letter-spacing: -0.04em">10<span style="font-size: 32px; letter-spacing: 0"> min</span></span><span style="font-size: 17px">about that long, each one</span></div>
+<div style="padding: 36px 24px; border-left: 1px solid #141A1C; display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 72px; line-height: 0.9; letter-spacing: -0.04em">8</span><span style="font-size: 17px">levels, two age versions in each</span></div>
+<div style="padding: 36px 24px; border-left: 1px solid #141A1C; display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 72px; line-height: 0.9; letter-spacing: -0.04em">0</span><span style="font-size: 17px">screens. Mostly a pencil and a bit of floor.</span></div>
+</div>
 </section>
 
-<!-- 4. Inside -->
-<section class="inside" id="inside">
-  <div class="wrap">
-    <span class="eyebrow">What's inside</span>
-    <h2>Look, think, move</h2>
-    <p class="lead">Eight levels, from Look + Focus and Left + Right to Logic + Hands and Super Brain. Every activity has two parts, <i>Just Play</i> for ages 6–7 and <i>Level Up!</i> for ages 8–10, so siblings can share one book.</p>
-    <div class="grid">
-      <article class="tile"><img src="img/what-changed.jpg" alt="Workbook page What Changed?: two room pictures and items to circle" loading="lazy"><div><h3>Look closely</h3><p>Study a picture, then find the five things that changed in the second one.</p></div></article>
-      <article class="tile"><img src="img/cross-your-body.jpg" alt="Workbook page Cross Your Body: children doing moves and rows of move icons" loading="lazy"><div><h3>Cross your body</h3><p>Follow picture commands where one arm crosses the middle of the body: lazy eights, skating steps, a hand reaching to the other side.</p></div></article>
-      <article class="tile"><img src="img/mazes.jpg" alt="Workbook page Which Way? + Build: two maps from START to GOAL" loading="lazy"><div><h3>Plan the path</h3><p>Find the way from START to GOAL and add one block to your tower for every step.</p></div></article>
-      <article class="tile"><img src="img/two-jobs.jpg" alt="Workbook page One Hand · Two Jobs: kids follow patterns and move beads" loading="lazy"><div><h3>One hand thinks, the other moves</h3><p>Finish a pattern with one hand while the other moves beads from bowl to bowl.</p></div></article>
-      <article class="tile"><img src="img/shop-and-move.jpg" alt="Two activity cards: kids march and balance while solving price sums" loading="lazy"><div><h3>Math on the move</h3><p>Shopping sums while marching in place or balancing on one leg.</p></div></article>
-      <article class="tile"><img src="img/answers-certificate.jpg" alt="An answer key page and the Neuro Games certificate of completion" loading="lazy"><div><h3>Answers and a certificate</h3><p>Answer keys for every puzzle with a right answer, and a certificate to celebrate the finish.</p></div></article>
-    </div>
-    <div class="facts">
-      <div class="fact"><b>60</b><span>brain + body challenges</span></div>
-      <div class="fact"><b>8</b><span>levels</span></div>
-      <div class="fact"><b>2</b><span>age versions in every activity</span></div>
-      <div class="fact"><b>0</b><span>screens needed</span></div>
-    </div>
-    <h3 style="margin-top:48px">Real kids, real pages</h3>
-    <div class="kids">
-      <img src="img/kids-1.jpg" alt="A boy places beads on a Which Has More? page" loading="lazy" width="900" height="1200">
-      <img src="img/kids-2.jpg" alt="A girl works on a Neuro Games page with a pencil" loading="lazy" width="900" height="1200">
-      <img src="img/kids-3.jpg" alt="A girl does a movement from the book, hand on her shoulder" loading="lazy" width="900" height="1200">
-      <img src="img/kids-4.jpg" alt="A boy thinks over a Neuro Games puzzle" loading="lazy" width="900" height="1200">
-      <img src="img/kids-5.jpg" alt="A boy works on a Neuro Games page outdoors on a bench" loading="lazy" width="900" height="1200">
-      <img src="img/kids-6.jpg" alt="A boy does a movement from the book outdoors" loading="lazy" width="900" height="1200">
-    </div>
-  </div>
+<!-- REAL KIDS -->
+<section style="max-width: 1280px; margin: 0 auto; padding: 96px 40px 0; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 56px; line-height: 0.95; letter-spacing: -0.035em; text-transform: uppercase; max-width: 720px">Made for her own kids. They were the first testers.</h2>
+<p style="margin: 0; max-width: 380px; font-style: italic">Real pages, real kitchen tables, a bench in the park. No staging.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px"><img src="img/kids-1.jpg" alt="A boy places beads on a Which Has More? page" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4.6; object-fit: cover"><figcaption style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5457">Which has more?</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px"><img src="img/kids-3.jpg" alt="A girl does a movement from the book, hand on her shoulder" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4.6; object-fit: cover"><figcaption style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5457">Move like this</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px"><img src="img/kids-5.jpg" alt="A boy works on a Neuro Games page outdoors on a bench" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4.6; object-fit: cover"><figcaption style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5457">Think it through</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 10px"><img src="img/kids-6.jpg" alt="A boy does a movement from the book outdoors" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4.6; object-fit: cover"><figcaption style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5457">Then move</figcaption></figure>
+</div>
 </section>
 
-<!-- 5. Research -->
-<section class="research" id="research">
-  <div class="wrap">
-    <span class="eyebrow">What research says</span>
-    <h2>Why scientists keep looking at movement and thinking together</h2>
-    <p class="lead">Researchers have been studying how physical activity relates to children's attention and thinking skills for years, and a growing line of work looks at movement that also makes kids think. Here is what some of the key studies found, in plain words.</p>
-    <div class="studies">
-      <div class="study">
-        <h3>Active after-school program, 9 months</h3>
-        <p>Children aged 7–9 in a daily, roughly two-hour after-school physical activity program improved more than a comparison group on tasks of attention control and mental flexibility. Those who attended more gained more.</p>
-        <a href="https://doi.org/10.1542/peds.2013-3219" target="_blank" rel="noopener">Hillman et al., <i>Pediatrics</i>, 2014 →</a>
-      </div>
-      <div class="study">
-        <h3>US Physical Activity Guidelines review</h3>
-        <p>The expert committee behind the 2018 US guidelines found moderate evidence that physical activity is linked to better thinking skills in children aged 6–13, and strong evidence that a single bout of moderate-to-vigorous activity improves thinking for a short time afterwards.</p>
-        <a href="https://doi.org/10.1249/MSS.0000000000001936" target="_blank" rel="noopener">Erickson et al., <i>Medicine &amp; Science in Sports &amp; Exercise</i>, 2019 →</a>
-      </div>
-      <div class="study">
-        <h3>Movement that makes kids think</h3>
-        <p>In a 6-week PE study with children aged 10–12, games that were physically active <i>and</i> mentally demanding improved one of the skills measured: switching between rules. Plain aerobic exercise with the same fitness gain did not.</p>
-        <a href="https://doi.org/10.1123/jsep.2015-0069" target="_blank" rel="noopener">Schmidt et al., <i>Journal of Sport &amp; Exercise Psychology</i>, 2015 →</a>
-      </div>
-      <div class="study">
-        <h3>What helps executive functions</h3>
-        <p>A large review of programs for children's planning and self-control skills concluded that "mindless" aerobic exercise does little, while activities that combine movement with thinking look more promising, though gains mostly show up in the skills practiced.</p>
-        <a href="https://doi.org/10.1016/j.dcn.2015.11.005" target="_blank" rel="noopener">Diamond &amp; Ling, <i>Developmental Cognitive Neuroscience</i>, 2016 →</a>
-      </div>
-      <div class="study">
-        <h3>Short movement breaks in class</h3>
-        <p>Across dozens of primary-school studies, classroom activity breaks and active lessons were linked to children staying more on-task.</p>
-        <a href="https://doi.org/10.1186/s12966-017-0569-9" target="_blank" rel="noopener">Watson et al., <i>International Journal of Behavioral Nutrition and Physical Activity</i>, 2017 →</a>
-      </div>
-      <div class="study">
-        <h3>Activity, learning and grades</h3>
-        <p>A systematic review found generally positive links between physical activity and children's thinking, and no sign that time spent moving harms learning, though the authors call the evidence inconsistent.</p>
-        <a href="https://doi.org/10.1249/MSS.0000000000000901" target="_blank" rel="noopener">Donnelly et al., <i>Medicine &amp; Science in Sports &amp; Exercise</i>, 2016 →</a>
-      </div>
-    </div>
-
-    <h3 style="margin-top:56px">Why it matters now</h3>
-    <div class="why-now">
-      <div><b>Kids need daily movement</b>The World Health Organization recommends that children aged 5–17 get an average of 60 minutes of moderate-to-vigorous activity a day and limit recreational screen time.<br><a href="https://doi.org/10.1136/bjsports-2020-102955" target="_blank" rel="noopener">WHO guidelines, 2020 →</a></div>
-      <div><b>Most teens don't move enough</b>About 4 in 5 school-going 11–17-year-olds worldwide did not meet that 60-minute goal (2016 data).<br><a href="https://doi.org/10.1016/S2352-4642(19)30323-2" target="_blank" rel="noopener">Guthold et al., <i>Lancet Child &amp; Adolescent Health</i>, 2020 →</a></div>
-      <div><b>Ten minutes fits</b>Short, playful breaks are easy to add after school or on a rainy weekend: a page, a puzzle, a move.</div>
-    </div>
-
-    <p class="note">Neuro Games is built on these ideas. The book itself has not been tested in a scientific study, and it is an activity book, not a treatment.</p>
-  </div>
+<!-- 01 INSIDE -->
+<section id="inside" style="max-width: 1280px; margin: 0 auto; padding: 120px 40px 0; display: flex; flex-direction: column; gap: 48px">
+<div style="border-top: 1px solid #141A1C; padding-top: 20px; display: flex; flex-wrap: wrap; gap: 24px 64px">
+<span style="flex: 0 0 200px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase">What's inside</span>
+<div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 72px; line-height: 0.92; letter-spacing: -0.04em; text-transform: uppercase">Look. Think. Move.</h2>
+<p style="margin: 0; max-width: 640px">Eight levels, from Look + Focus and Left + Right to Logic + Hands and Super Brain. Every activity has two parts: Just Play for ages 6–7 and Level Up! for ages 8–10, so siblings can share one book.</p>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px 32px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px"><img src="img/what-changed.jpg" alt="Workbook page What Changed?: two room pictures and items to circle" loading="lazy" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid #141A1C"><figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; text-transform: uppercase">Look closely</span><span>Study a picture, then find the five things that changed in the second one.</span></figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px"><img src="img/cross-your-body.jpg" alt="Workbook page Cross Your Body: children doing moves and rows of move icons" loading="lazy" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid #141A1C"><figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; text-transform: uppercase">Cross your body</span><span>Picture commands where one arm crosses the middle of the body: lazy eights, skating steps, a reach to the other side.</span></figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px"><img src="img/mazes.jpg" alt="Workbook page Which Way? + Build: two maps from START to GOAL" loading="lazy" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid #141A1C"><figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; text-transform: uppercase">Plan the path</span><span>Find the way from START to GOAL and add one block to the tower for every step.</span></figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px"><img src="img/two-jobs.jpg" alt="Workbook page One Hand, Two Jobs: kids follow patterns and move beads" loading="lazy" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid #141A1C"><figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; text-transform: uppercase">One hand thinks, the other moves</span><span>Finish a pattern with one hand while the other moves beads from bowl to bowl.</span></figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px"><img src="img/shop-and-move.jpg" alt="Two activity cards: kids march and balance while solving price sums" loading="lazy" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid #141A1C"><figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; text-transform: uppercase">Math on the move</span><span>Shopping sums while marching in place or balancing on one leg.</span></figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px"><img src="img/answers-certificate.jpg" alt="An answer key page and the Neuro Games certificate of completion" loading="lazy" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid #141A1C"><figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -0.01em; text-transform: uppercase">Answers and a certificate</span><span>Answer keys for every puzzle with a right answer, and a certificate for the finish.</span></figcaption></figure>
+</div>
 </section>
 
-<!-- Final CTA -->
-<section class="final">
-  <div class="wrap">
-    <h2>Ready for ten minutes of brain + body play?</h2>
-    <p class="lead"><i>Neuro Games: Brain + Body Workbook</i><br>10-Minute Challenges for a Brighter Tomorrow.<br> Paperback, 82 pages, ages 6–10.</p>
-    <a class="btn" href="https://www.amazon.com/dp/B0HN2FSRKN" target="_blank" rel="noopener">Get it on Amazon →</a>
-  </div>
+<!-- TWO VERSIONS -->
+<section style="max-width: 1280px; margin: 0 auto; padding: 120px 40px 0">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); border-top: 1px solid #141A1C; border-bottom: 1px solid #141A1C">
+<div style="padding: 40px 40px 40px 0; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase">Ages 6–7</span>
+<span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 56px; line-height: 0.95; letter-spacing: -0.035em; text-transform: uppercase">Just Play</span>
+<p style="margin: 0 0 16px">The gentle version: a simpler task to start with, so the first wins come fast.</p>
+<img src="img/kids-4.jpg" alt="A boy thinks over a Neuro Games puzzle" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%">
+</div>
+<div style="padding: 40px 0 40px 40px; border-left: 1px solid #141A1C; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase">Ages 8–10</span>
+<span style="font-family: Archivo, sans-serif; font-weight: 800; font-size: 56px; line-height: 0.95; letter-spacing: -0.035em; text-transform: uppercase; color: #2F5D4E">Level Up!</span>
+<p style="margin: 0 0 16px">Same activity, a harder task: more to keep in mind, more to plan, trickier moves.</p>
+<img src="img/kids-2.jpg" alt="A girl works on a Neuro Games page with a pencil" loading="lazy" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%">
+</div>
+</div>
 </section>
-<footer>© 2026 Coddy NY Corp · Natalia Milos · <a href="https://www.amazon.com/stores/Natalia-Milos/author/B0HN32VNQZ" target="_blank" rel="noopener">Author page on Amazon</a></footer>
+
+<!-- 02 AUTHOR -->
+<section id="author" style="max-width: 1280px; margin: 0 auto; padding: 120px 40px 0; display: flex; flex-direction: column; gap: 48px">
+<div style="border-top: 1px solid #141A1C; padding-top: 20px">
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase">About the author</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 48px 72px; align-items: flex-start">
+<figure style="margin: 0; flex: 1 1 380px; min-width: 0; max-width: 500px; display: flex; flex-direction: column; gap: 10px">
+<img src="img/author.jpg" alt="Natalia Milos, author of Neuro Games" loading="lazy" style="width: 100%; aspect-ratio: 2 / 3; object-fit: cover">
+<figcaption style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5457">Natalia Milos, New York</figcaption>
+</figure>
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 88px; line-height: 0.9; letter-spacing: -0.045em; text-transform: uppercase">Natalia Milos</h2>
+<blockquote style="margin: 0; font-size: 30px; line-height: 1.3; font-style: italic; max-width: 620px">“I made this book for my own children. They were its first testers.”</blockquote>
+<p style="margin: 0">Director of Coddy, a coding school for kids in New York. For more than 10 years she has worked with children and kept seeing the same thing: kids engage differently when they can think and move at the same time. Neuro Games collects the activities she practiced at home with her own kids.</p>
+<p style="margin: 0">Her toughest examiner was the family's grandmother, a doctor with 40 years of practice who spent years caring for children at the Suvorov Military School and a children's wushu federation. She quizzed Natalia on anatomy and physiology before her exams, with checks that would make Minos and Procrustes look lenient. The illustrations were drawn by AI from Natalia's detailed instructions, which kept the book affordable. The concept, every activity, both age versions and all the checking are her work.</p>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #141A1C; margin-top: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 16px 0; border-bottom: 1px solid #C9C3B6"><span style="font-weight: 500">Youth Exercise Specialist</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5457">NASM · Certified</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 16px 0; border-bottom: 1px solid #C9C3B6"><span style="font-weight: 500">Brain Fitness Coach</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5457">ISSA · Certified</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 16px 0; border-bottom: 1px solid #C9C3B6"><span style="font-weight: 500">Cognitive Fitness</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5457">Harvard Health Publishing · Course</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 16px 0; border-bottom: 1px solid #C9C3B6"><span style="font-weight: 500">Youth Fitness Instructor</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5457">FPA · Course</span></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding: 16px 0; border-bottom: 1px solid #C9C3B6"><span style="font-weight: 500">Personal Fitness Trainer</span><span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: #4A5457">FPA · Course</span></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 12px">
+<a href="img/cert-nasm-yes.jpg" target="_blank" rel="noopener" aria-label="NASM Youth Exercise Specialist certificate"><img src="img/cert-nasm-yes-s.jpg" alt="NASM Youth Exercise Specialist certificate" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #C9C3B6"></a>
+<a href="img/cert-issa-brain-fitness.jpg" target="_blank" rel="noopener" aria-label="ISSA Brain Fitness Coach certificate"><img src="img/cert-issa-brain-fitness-s.jpg" alt="ISSA Brain Fitness Coach certificate" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #C9C3B6"></a>
+<a href="img/cert-harvard-cognitive-fitness.jpg" target="_blank" rel="noopener" aria-label="Harvard Health Publishing Cognitive Fitness certificate"><img src="img/cert-harvard-cognitive-fitness-s.jpg" alt="Harvard Health Publishing Cognitive Fitness certificate" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #C9C3B6"></a>
+<a href="img/cert-fpa-youth-fitness.jpg" target="_blank" rel="noopener" aria-label="FPA Youth Fitness Instructor certificate"><img src="img/cert-fpa-youth-fitness-s.jpg" alt="FPA Youth Fitness Instructor certificate" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #C9C3B6"></a>
+<a href="img/cert-fpa-personal-trainer.jpg" target="_blank" rel="noopener" aria-label="FPA Personal Fitness Trainer certificate"><img src="img/cert-fpa-personal-trainer-s.jpg" alt="FPA Personal Fitness Trainer certificate" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid #C9C3B6"></a>
+</div>
+<p style="margin: 0; font-size: 15px; color: #4A5457">Certificates are issued to her full name, Natalia Miloserdnaya. Tap one to see it full size.</p>
+</div>
+</div>
+</section>
+
+<!-- 03 RESEARCH -->
+<section id="research" style="max-width: 1280px; margin: 0 auto; padding: 120px 40px 0; display: flex; flex-direction: column; gap: 40px">
+<div style="border-top: 1px solid #141A1C; padding-top: 20px; display: flex; flex-wrap: wrap; gap: 24px 64px">
+<span style="flex: 0 0 200px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase">What research says</span>
+<div style="flex: 1 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 72px; line-height: 0.92; letter-spacing: -0.04em; text-transform: uppercase">Why moving and thinking belong together.</h2>
+<p style="margin: 0; max-width: 640px">Researchers have studied how physical activity relates to children's attention and thinking for years. Here is what some of the key studies found, in plain words.</p>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #141A1C">
+<div style="display: flex; flex-wrap: wrap; gap: 8px 40px; padding: 24px 0; border-bottom: 1px solid #C9C3B6"><span style="flex: 0 0 240px; font-family: Archivo, sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase">Kids need daily movement</span><span style="flex: 1 1 420px; min-width: 0">WHO recommends an average of 60 minutes of moderate-to-vigorous activity a day for ages 5–17, and limiting recreational screen time.</span><a target="_blank" rel="noopener" href="https://doi.org/10.1136/bjsports-2020-102955" style="flex: 0 0 220px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em">WHO guidelines, 2020</a></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 40px; padding: 24px 0; border-bottom: 1px solid #C9C3B6"><span style="flex: 0 0 240px; font-family: Archivo, sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase">Most teens don't move enough</span><span style="flex: 1 1 420px; min-width: 0">About 4 in 5 school-going 11–17-year-olds worldwide did not meet the 60-minute goal (2016 data).</span><a target="_blank" rel="noopener" href="https://doi.org/10.1016/S2352-4642(19)30323-2" style="flex: 0 0 220px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em">Guthold et al., Lancet CAH, 2020</a></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 40px; padding: 24px 0; border-bottom: 1px solid #C9C3B6"><span style="flex: 0 0 240px; font-family: Archivo, sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase">US activity guidelines review</span><span style="flex: 1 1 420px; min-width: 0">Moderate evidence that activity is linked to better thinking in kids 6–13, and strong evidence that a single bout of moderate-to-vigorous activity helps thinking for a short time afterwards.</span><a target="_blank" rel="noopener" href="https://doi.org/10.1249/MSS.0000000000001936" style="flex: 0 0 220px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em">Erickson et al., MSSE, 2019</a></div>
+<details style="display: block">
+<summary style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; min-height: 64px; border-bottom: 1px solid #C9C3B6; font-family: Archivo, sans-serif; font-weight: 600; font-size: 16px; letter-spacing: 0.04em; text-transform: uppercase"><span>5 more studies</span><span class="tg" aria-hidden="true" style="font-size: 28px; font-weight: 400">+</span></summary>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 40px; padding: 24px 0; border-bottom: 1px solid #C9C3B6"><span style="flex: 0 0 240px; font-family: Archivo, sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase">Movement breaks in class</span><span style="flex: 1 1 420px; min-width: 0">Across dozens of primary-school studies, activity breaks were linked to kids staying more on-task.</span><a target="_blank" rel="noopener" href="https://doi.org/10.1186/s12966-017-0569-9" style="flex: 0 0 220px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em">Watson et al., IJBNPA, 2017</a></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 40px; padding: 24px 0; border-bottom: 1px solid #C9C3B6"><span style="flex: 0 0 240px; font-family: Archivo, sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase">Activity, learning and grades</span><span style="flex: 1 1 420px; min-width: 0">A systematic review found generally positive links between activity and kids' thinking, and no sign that moving harms learning. The authors call the evidence inconsistent.</span><a target="_blank" rel="noopener" href="https://doi.org/10.1249/MSS.0000000000000901" style="flex: 0 0 220px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em">Donnelly et al., MSSE, 2016</a></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 40px; padding: 24px 0; border-bottom: 1px solid #C9C3B6"><span style="flex: 0 0 240px; font-family: Archivo, sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase">What helps executive functions</span><span style="flex: 1 1 420px; min-width: 0">“Mindless” aerobic exercise does little. Activities that combine movement with thinking look more promising, though gains mostly show up in the skills practiced.</span><a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.dcn.2015.11.005" style="flex: 0 0 220px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em">Diamond &amp; Ling, DCN, 2016</a></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 40px; padding: 24px 0; border-bottom: 1px solid #C9C3B6"><span style="flex: 0 0 240px; font-family: Archivo, sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase">Movement that makes kids think</span><span style="flex: 1 1 420px; min-width: 0">In a 6-week PE study with kids aged 10–12, games that were active and mentally demanding improved one of the skills measured: switching between rules. Plain aerobic exercise did not.</span><a target="_blank" rel="noopener" href="https://doi.org/10.1123/jsep.2015-0069" style="flex: 0 0 220px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em">Schmidt et al., JSEP, 2015</a></div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 40px; padding: 24px 0; border-bottom: 1px solid #C9C3B6"><span style="flex: 0 0 240px; font-family: Archivo, sans-serif; font-weight: 800; font-size: 18px; text-transform: uppercase">After-school activity, 9 months</span><span style="flex: 1 1 420px; min-width: 0">Kids aged 7–9 in a daily, roughly two-hour activity program improved more than a comparison group on attention control and mental flexibility. More attendance, bigger gains.</span><a target="_blank" rel="noopener" href="https://doi.org/10.1542/peds.2013-3219" style="flex: 0 0 220px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.04em">Hillman et al., Pediatrics, 2014</a></div>
+</details>
+</div>
+<p style="margin: 0; font-size: 15px; color: #4A5457; max-width: 720px">Neuro Games is built on these ideas. The book itself has not been tested in a scientific study, and it is an activity book, not a treatment.</p>
+</section>
+
+<!-- FINAL CTA -->
+<section style="max-width: 1280px; margin: 0 auto; padding: 120px 40px 0">
+<div style="border-top: 1px solid #141A1C; padding: 72px 0 96px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px 80px">
+<img src="img/cover.jpg" alt="Neuro Games book cover" style="flex: 0 0 220px; width: 220px; height: auto; box-shadow: 0 20px 40px -18px rgba(20,26,28,.45)">
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<h2 style="margin: 0; font-family: Archivo, sans-serif; font-weight: 800; font-size: 72px; line-height: 0.92; letter-spacing: -0.04em; text-transform: uppercase">Ready for ten minutes of brain + body play?</h2>
+<p style="margin: 0; color: #4A5457">Neuro Games: Brain + Body Workbook. Paperback, 82 pages, ages 6–10.</p>
+<a target="_blank" rel="noopener" href="https://www.amazon.com/dp/B0HN2FSRKN" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 14px; min-height: 60px; padding: 0 32px; background: #2F5D4E; color: #FFFFFF; text-decoration: none; font-family: Archivo, sans-serif; font-weight: 600; font-size: 17px; letter-spacing: 0.02em; text-transform: uppercase">Buy on Amazon <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+</section>
+<footer style="border-top: 1px solid #C9C3B6">
+<div style="max-width: 1280px; margin: 0 auto; padding: 24px 40px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #4A5457">
+<span>© 2026 Coddy NY Corp · Natalia Milos</span>
+<a target="_blank" rel="noopener" href="https://www.amazon.com/stores/Natalia-Milos/author/B0HN32VNQZ">Author page on Amazon</a>
+</div>
+</footer>
+
+</div>
 
 </body>
 </html>
