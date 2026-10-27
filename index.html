@@ -78,6 +78,9 @@ section{padding:88px 0}
 .fact span{font-size:15px;color:var(--muted)}
 .kids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:40px}
 .kids img{border-radius:16px;aspect-ratio:3/5;object-fit:cover;object-position:center top;width:100%}
+.video{max-width:360px;margin:32px auto 0}
+.video video{display:block;width:100%;height:auto;aspect-ratio:9/16;border-radius:16px;background:#000}
+.video p{margin-top:10px;font-size:14px;color:var(--muted);text-align:center}
 
 /* 5. research */
 .studies{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
@@ -218,6 +221,12 @@ footer a{color:#c5cce0}
       <div class="fact"><b>0</b><span>screens needed</span></div>
     </div>
     <h3 style="margin-top:48px">Real kids, real pages: at home, outside, on the road</h3>
+    <div class="video">
+      <video controls playsinline preload="none" poster="img/kids-video-poster.jpg" width="720" height="1280">
+        <source src="img/kids-video.mp4" type="video/mp4">
+      </video>
+      <p>Research on movement-and-thinking play is still growing. See <a href="#research">what studies found</a> below.</p>
+    </div>
     <div class="kids">
       <img src="img/kids-1.jpg" alt="A boy places beads on a Which Has More? page" loading="lazy" width="900" height="1200">
       <img src="img/kids-car-1.jpg" alt="A boy holds Neuro Games in the back seat of a car" loading="lazy" width="900" height="1200">
