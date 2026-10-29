@@ -81,6 +81,9 @@ section{padding:88px 0}
 .video{max-width:360px;margin:32px auto 0}
 .video video{display:block;width:100%;height:auto;aspect-ratio:9/16;border-radius:16px;background:#000}
 .video p{margin-top:10px;font-size:14px;color:var(--muted);text-align:center}
+.videos{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:32px}
+.videos .video{margin:0;flex:1 1 280px;max-width:360px}
+.videos-note{margin-top:10px;font-size:14px;color:var(--muted);text-align:center}
 
 /* 5. research */
 .studies{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:36px}
@@ -95,11 +98,6 @@ section{padding:88px 0}
 .why-now b{color:var(--navy);display:block;margin-bottom:4px;font-size:17px}
 
 /* final */
-.halloween{background:#2b2238;color:#efe7f7;text-align:center;padding:64px 0}
-.halloween h2{color:#fff}
-.halloween .lead{color:#d9cdea;margin:0 auto}
-.halloween .video{margin-top:24px}
-.halloween .btn{margin-top:28px;background:#f08a24;box-shadow:0 6px 0 #a95c1585}
 .final{background:var(--navy);color:#e8ecf7;text-align:center}
 .final h2{color:#fff}
 .final .lead{color:#c5cce0;max-width:640px;margin:0 auto 32px}
@@ -155,20 +153,6 @@ footer a{color:#c5cce0}
     <a class="cover" href="https://www.amazon.com/dp/B0HN2FSRKN" target="_blank" rel="noopener" aria-label="Neuro Games on Amazon"><img src="img/cover.jpg" alt="Neuro Games — Brain + Body Workbook cover: two kids balancing in a sunny playroom" width="1000" height="1306"></a>
   </div>
 </header>
-
-<!-- Halloween 2026 (temporary) -->
-<section class="halloween" id="halloween">
-  <div class="wrap">
-    <h2>Trick or… Brain? 🎃</h2>
-    <p class="lead">Brain first. Candy second.</p>
-    <div class="video">
-      <video controls playsinline preload="none" poster="img/halloween-video-poster.jpg" width="720" height="1280">
-        <source src="img/halloween-video.mp4" type="video/mp4">
-      </video>
-    </div>
-    <a class="btn" href="https://www.amazon.com/dp/B0HN2FSRKN" target="_blank" rel="noopener">Get it on Amazon →</a>
-  </div>
-</section>
 
 <!-- 2. News and why -->
 <section class="story">
@@ -240,12 +224,19 @@ footer a{color:#c5cce0}
       <div class="fact"><b>0</b><span>screens needed</span></div>
     </div>
     <h3 style="margin-top:48px">Real kids, real pages: at home, outside, on the road</h3>
-    <div class="video">
-      <video controls playsinline preload="none" poster="img/kids-video-poster.jpg" width="720" height="1280">
-        <source src="img/kids-video.mp4" type="video/mp4">
-      </video>
-      <p>Research on movement-and-thinking play is still growing. See <a href="#research">what studies found</a> below.</p>
+    <div class="videos">
+      <div class="video">
+        <video controls playsinline preload="none" poster="img/halloween-video-poster.jpg" width="720" height="1280">
+          <source src="img/halloween-video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video">
+        <video controls playsinline preload="none" poster="img/kids-video-poster.jpg" width="720" height="1280">
+          <source src="img/kids-video.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
+    <p class="videos-note">Research on movement-and-thinking play is still growing. See <a href="#research">what studies found</a> below.</p>
     <div class="kids">
       <img src="img/kids-1.jpg" alt="A boy places beads on a Which Has More? page" loading="lazy" width="900" height="1200">
       <img src="img/kids-car-1.jpg" alt="A boy holds Neuro Games in the back seat of a car" loading="lazy" width="900" height="1200">
